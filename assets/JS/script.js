@@ -1,5 +1,14 @@
 let currentDayEl = $('#currentDay');
-
+let hourNineEl = $('#hour-9');
+let hourTenEl = $('#hour-10');
+let hourElevenEl = $('#hour-11');
+let hourTwelveEl = $('#hour-12');
+let hourOneEl = $('#hour-1');
+let hourTwoEl = $('#hour-2');
+let hourThreeEl = $('#hour-3');
+let hourFourEl = $('#hour-4');
+let hourFiveEl = $('#hour-5');
+let workHourArr = [hourNineEl, hourTenEl, hourElevenEl, hourTwelveEl, hourOneEl, hourTwoEl, hourThreeEl, hourFourEl, hourFiveEl];
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
@@ -22,4 +31,5 @@ $(function () {
   // attribute of each time-block be used to do this?
   //
   // TODO: Add code to display the current date in the header of the page.
+  $(currentDayEl).text(dayjs().format('DD MMMM, YYYY'));
 });
