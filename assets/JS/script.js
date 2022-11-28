@@ -9,7 +9,7 @@ let hourThreeEl = $('#3PM');
 let hourFourEl = $('#4PM');
 let hourFiveEl = $('#5PM');
 let workHourArr = [hourNineEl, hourTenEl, hourElevenEl, hourTwelveEl, hourOneEl, hourTwoEl, hourThreeEl,hourFourEl,hourFiveEl]
-let currentHour = dayjs().format('h')
+let currentHour = dayjs().format('h:00')
 console.log(currentHour)
 
 
@@ -39,10 +39,12 @@ $(function () {
         $(this).removeClass('present');
         $(this).removeClass('future');
         $(this).addClass('past');
-      } else if ($(this)[0].dataset.hour > currentHour);
+      } else if ($(this)[0].dataset.hour > currentHour) {
         $(this).removeClass('past');
         $(this).removeClass('present');
         $(this).addClass('future');
+      };
+        
     })
   //
   // TODO: Add code to get any user input that was saved in localStorage and set
